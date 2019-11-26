@@ -18,7 +18,7 @@ namespace TsukiDiscordBot
                 client_id = client_id.Trim();
             }
 
-            discord = new DiscordCore(client_id);
+            discord = new DiscordCore(client_id, null);
         }
 
         public void run()

@@ -20,10 +20,10 @@ namespace TsukiDiscordBot.DiscordClient
         ClientWebSocket socket = new ClientWebSocket();
         System.Timers.Timer heartbeatTimer = new System.Timers.Timer();
         DiscordSocketSender socketSender;
-        IDiscordEvents events;
+        IDiscordEvents? events;
 
         public static int? lastSequence = null;
-        public DiscordCore(String client_id, IDiscordEvents events)
+        public DiscordCore(String client_id, IDiscordEvents? events)
         {
             this.client_id = client_id;
             heartbeatTimer.Elapsed += HeartbeatTimerElapsed;
