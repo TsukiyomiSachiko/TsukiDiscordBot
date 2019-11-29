@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DiscordClient;
+using System;
 using System.IO;
-using System.Text;
-using TsukiDiscordBot.DiscordClient;
 
 namespace TsukiDiscordBot
 {
@@ -17,8 +15,11 @@ namespace TsukiDiscordBot
                 client_id = r.ReadToEnd();
                 client_id = client_id.Trim();
             }
+            DiscordEventResolver discordEventResolver = new DiscordEventResolver();
 
-            discord = new DiscordCore(client_id);
+            discordEventResolver.setReadyEventHandler(EventResolver.onReadyEvent);
+
+            discord = new DiscordCore(client_id, discordEventResolver);
         }
 
         public void run()

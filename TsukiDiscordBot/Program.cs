@@ -1,7 +1,4 @@
-﻿using System;
-using TsukiDiscordBot.DiscordClient;
-
-namespace TsukiDiscordBot
+﻿namespace TsukiDiscordBot
 {
     class Program
     {

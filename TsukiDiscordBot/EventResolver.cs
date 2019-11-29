@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TsukiDiscordBot.DiscordClient.DiscordInterfaces;
+﻿using DiscordClient;
+using System;
 
 namespace TsukiDiscordBot
 {
-    class EventResolver : IDiscordEvents
+    static class EventResolver
     {
-        public void onReadyEvent()
+        public static void onReadyEvent()
         {
             Console.WriteLine("Ready");
         }
